@@ -335,4 +335,5 @@ ENDIF()
     rol
     HEADERS ${HEADERS}
     SOURCES ${SOURCES}
+    DEPLIBS TuckerSerial::all_libs
     )
