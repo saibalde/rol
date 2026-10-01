@@ -244,8 +244,8 @@ std::vector<Real> Constraint<Real>::solveAugmentedSystem(Vector<Real> &v1,
     }
     H(i+1,i) = std::sqrt(w1->dot(*w1) + w2->dot(*w2));
     
-   const bool breakdown = (H(i+1,i) == zero);
-   if (!breakdown) {
+    const bool breakdown = (H(i+1,i) == zero);
+    if (!breakdown) {
       V1.push_back(b1.clone()); (V1[i+1])->set(*w1); (V1[i+1])->scale(one/H(i+1,i));
       V2.push_back(b2.clone()); (V2[i+1])->set(*w2); (V2[i+1])->scale(one/H(i+1,i));
     }
